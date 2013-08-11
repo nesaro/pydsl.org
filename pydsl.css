@@ -1,0 +1,27 @@
+.button 
+{
+float: left;
+margin: 0px 2px;
+border: 1px 1px 1px 1px;
+padding: 0px 4px;
+border-color:black;
+border-style:solid;
+border-width:thin;
+}
+
+#logo
+{
+float: left;
+}
+
+#top_bar
+{
+}
+
+#content
+{
+    margin-top:4px;
+    float: left;
+    clear: both; 
+    position: relative;
+}

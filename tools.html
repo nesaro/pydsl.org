@@ -28,25 +28,61 @@
             <div id="content">
                 <div class="right_content">
                     <h1>Check</h1>
-                    <p>Checks if an input conforms a Grammar or an Alphabet</p>
+                    <p>Checks if an input conforms a Grammar or an Alphabet. Returns a boolean value.</p>
                 </div>
                 <div class="float_left">
                     <img src="check.png" alt="check"/>
                 </div>
+
                 <div class="right_content">       
                     <h1>Guess</h1>
-                    <p>Given an input, to which grammars and alphabets belongs ?</p>
+                    <p>Given an input and a repository with grammar and alphabets, it checks the input against every available definition, returning a list of valid grammars</p>
+                    <h2>What's the pydsl approach?</h2>
+                    <p>Pydsl includes a grammar and an alphabet repository to test against</p>
                 </div>
                 <div class="float_left">
                     <img src="guess.png" alt="guess"/>
                 </div>
+
+                <div class="right_content">
+                    <h1>Parser</h1>
+                    <p>Receives an input and generates an expanded tree known as a parse tree</p>
+                </div>
+
+                <div class="float_left">
+                    <img src="parser.png" alt="parser"/>
+                </div>
+
                 <div class="right_content">       
                     <h1>Validate</h1>
-                    <p>Given an input, that doesn't belong to a grammar, reports what needs to be fixed in the input to belong to the grammar</p>
+                    <p>Given an input that doesn't belong to a grammar, reports what needs to be fixed in the input to belong to that grammar</p>
+                    <h2>What's the pydsl approach?</h2>
+                    <p>It uses the expended definition of the input through Parsers</p>
                 </div>
                 <div class="float_left">
                     <img src="validate.png" alt="validate"/>
                 </div>
+
+                <div class="right_content">
+                    <h1>Translator</h1>
+                    <p>Translates an input to an output</p>
+                    <h2>Encoding conversion</h2>
+                    <p>In pydsl, encodings are described as alphabets</p>
+                </div>
+
+                <div class="float_left">
+                    <img src="translator.png" alt="translator"/>
+                </div>
+
+                <div class="right_content">
+                    <h1>Diff</h1>
+                    <p>Shows the difference between two inputs that belong to the same alphabet </p>
+                </div>
+
+                <div class="float_left">
+                    <img src="diff.png" alt="diff"/>
+                </div>
+
             </div>
         </div>
         <div class="footer_wrap"> <footer> <a href="http://github.com/nesaro/pydsl.org">Improve me!</a> </footer> </div>

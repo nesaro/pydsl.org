@@ -4,7 +4,7 @@
 
 html { background:#FFF;
 }
-body { font: 13px/1.4 Helvetica, arial, sans-serif;color:#333; line-height: 20px;}
+body { font: 16px/1.4 Helvetica, arial, sans-serif;color:#333; line-height: 20px;}
 .group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
 .group { display: inline-block; clear: both; }
 /* start commented backslash hack \*/ * html .group { height: 1%; } .group { display: block; } /* close commented backslash hack */
@@ -25,7 +25,7 @@ a {
 }
 
 #page_wrap {
-    width:940px;
+    width:640px;
     margin:0 auto;
 }
 
@@ -45,7 +45,7 @@ header {
 }
 #top_bar
 {   
-    width: 940px;
+    width: 640px;
     position: relative;
     margin-top: 20px;
     display: block;
@@ -106,7 +106,7 @@ header {
     border-bottom: 2px solid #4183c4;
 }
 #content {
-    width: 940px;
+    width: 640px;
     margin:0 auto;
     margin-top: 30px;
 }
@@ -122,37 +122,37 @@ padding-bottom: 15px;
 
 .right_content {
     float: right;
-    width: 600px;
+    width: 400px;
     padding: 0px 20px 20px 20px;
     
 }
 
 .left_content {
     float: left;
-    width: 600px;
+    width: 400px;
     padding: 0px 20px 20px 20px;
     
 }
 
 .float_right {
     float: right;
-    width: 260px;
+    width: 160px;
     padding: 0px 20px 20px 0px;
 }
 
 .float_right img {
-    width: 260px;
+    width: 160px;
     border-radius: 20px;
 }
 
 .float_left {
     float: right;
-    width: 260px;
+    width: 160px;
     padding: 0px 20px 20px 0px;
 }
 
 .float_left img {
-    width: 260px;
+    width: 160px;
     border-radius: 20px;
 }
 
@@ -161,7 +161,7 @@ padding-bottom: 15px;
         margin-top: 30px;
 }
 footer {
-    width: 940px;
+    width: 640px;
     text-align: center;
     border-top: 1px solid #ececec;
     margin:0 auto;

@@ -167,3 +167,12 @@ footer {
     margin:0 auto;
     padding: 15px;
 }
+
+pre{
+    padding: 3px 5px; 
+    border: 3px double silver;
+    background: #efe; 
+    overflow: auto;
+    font-size: 13px;
+    /* causes a scrollbar if content does not fit */
+}

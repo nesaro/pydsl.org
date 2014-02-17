@@ -32,32 +32,17 @@
                     <h1>Check</h1>
                     <p>Checks if an input conforms a Grammar. Returns True or False.</p>
                     <pre>
->>> from pydsl.Config import load_default_memory
->>> load_default_memory()
+>>> from pydsl.Grammar import RegularExpression
+>>> integer = RegularExpression("^[0123456789]*$")
 >>> from pydsl.Check import check
->>> check("integer","abc")
+>>> check(integer,"abc")
 False
->>> check("integer","1234")
+>>> check(integer,"1234")
 True
                     </pre>
                 </div>
                 <div class="float_left">
                     <img src="check.png" alt="check"/>
-                </div>
-
-                <div class="right_content">       
-                    <h1>Guess</h1>
-                    <p>Given an input and a repository with grammars, it checks the input against every available definition, returning a list of valid grammars</p>
-                    <pre>
->>> from pydsl.Config import load_default_memory
->>> load_default_memory()
->>> from pydsl.Guess import guess
->>> guess("1234")
-{'cstring', 'hex', 'unixFilename', ..., 'ascii'}
-                    </pre>
-                </div>
-                <div class="float_left">
-                    <img src="guess.png" alt="guess"/>
                 </div>
 
                 <div class="right_content">
@@ -75,18 +60,20 @@ True
                     <h2>What's the pydsl approach?</h2>
                     <p>It uses the expanded definition of the input through Parsers. A tree of valid invalid nodes is generates, at the moment you'll need to inspect the tree</p>
                     <pre>
->>> from pydsl.Config import load_default_memory
->>> load_default_memory()
+>>> from pydsl.Grammar import RegularExpression
+>>> from pydsl.File.BNF import load_bnf_file
+>>> integer = RegularExpression("^[0123456789]*$")
+>>> date = load_bnf_file("pydsl/contrib/grammar/Date.bnf", {'integer':integer, 'DayOfMonth':load_python_file('pydsl/contrib/grammar/DayOfMonth.py')})
 >>> from pydsl.Validate import validate
->>> validate("Date","123")
+>>> validate(date,"123")
 [<pydsl.Tree.ParseTree object at 0x2aa6110>]
->>> validate("Date","123,3")
+>>> validate(date,"123,3")
 [<pydsl.Tree.ParseTree object at 0x2920510>]
->>> validate("Date","123/3")
+>>> validate(date,"123/3")
 [<pydsl.Tree.ParseTree object at 0x2a89f50>]
->>> validate("Date","123/3/13")
+>>> validate(date,"123/3/13")
 [<pydsl.Tree.ParseTree object at 0x2920510>]
->>> validate("Date","12/3/13")
+>>> validate(date,"12/3/13")
 []
                     </pre>
                 </div>
@@ -111,20 +98,6 @@ True
 
                 <div class="float_left">
                     <img src="translator.png" alt="translator"/>
-                </div>
-
-                <div class="right_content">
-                    <h1>Diff</h1>
-                    <p>Shows the difference between two inputs that belong to the same alphabet </p>
-                </div>
-
-                <div class="float_left">
-                    <img src="diff.png" alt="diff"/>
-                </div>
-
-                <div class="right_content">
-                    <h1>Match</h1>
-                    <p>Checks if the beginning of the input matches the grammar</p>
                 </div>
 
                 <div class="right_content">
